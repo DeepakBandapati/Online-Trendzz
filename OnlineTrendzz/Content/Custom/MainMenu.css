@@ -1,8 +1,12 @@
-﻿.leftAlign {
+﻿.leftposition {
     width: 20%;
 }
 
-.rightAlign {
+.border {
+    border: 1px solid grey;
+}
+
+.rightPosition {
     width: 80%;
 }
 
