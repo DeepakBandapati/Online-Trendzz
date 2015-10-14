@@ -1,5 +1,7 @@
 ﻿.leftposition {
     width: 20%;
+    height: 741px;
+    overflow-y: auto;
 }
 
 .border {

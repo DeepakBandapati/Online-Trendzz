@@ -5,179 +5,61 @@
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <link href="../Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="../Content/Custom/MainMenu.css" rel="stylesheet" />
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/Custom/Scrollbar.js"></script>
 </head>
-<body>
-    <div class="page-header">
-        <div><h1 class="text-center"> Welcome to Online Trendzzz...</h1> </div>
-    </div>
-    <div class="pull-left leftposition border ">
-        <div>
-            <ul>
-                <li>
-                    <div>
-                        <h1>Title A</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h1>Title B</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h1>Title A</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h1>Title B</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h1>Title A</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h1>Title B</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h1>Title A</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h1>Title B</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h1>Title A</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h1>Title B</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </li>
-            </ul>
+<body ng-app="MainPage">
+    <div ng-controller="CategoryController">
+        <div class="page-header">
+            <div><h1 class="text-center"> Welcome to Online Trendzzz...</h1> </div>
+        </div>
+        <div class="pull-left leftposition border">
+            <section class="list">
+                <div>
+                    <ul ng-repeat="Category in Categories">
+                        <li>
+                            <div>
+                                <h1>{{Category.CategoryName}}</h1>
+                                <p>
+                                    <img ng-src="{{Category.src}}" />
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="pull-right rightPosition border table-responsive">
+            <table class="table-bordered">
+                <tr ng-repeat="Item in Items">
+                    <td>
+                        <div>
+                            <h1>{{Item.Title}}</h1>
+                            <p>
+                                <img ng-src="{{Item.src}}" />
+
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <h1>{{Item.Title}}</h1>
+                            <p>
+                                <img ng-src="{{Item.src}}" />
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <h1>{{Item.Title}}</h1>
+                            <p>
+                                <img ng-src="{{Item.src}}" />
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
-    <div class="pull-right rightPosition border">
-        <table>
-            <tr>
-                <td>
-                    <div>
-                        <h1>Title A</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <h1>Title B</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <h1>Title C</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div>
-                        <h1>Title D</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <h1>Title E</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <h1>Title F</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div>
-                        <h1>Title G</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <h1>Title H</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <h1>Title I</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                        </p>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-
 </body>
 </html>
